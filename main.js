@@ -135,6 +135,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_cta_block_cta_block_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/cta-block/cta-block.component */ "./src/app/components/cta-block/cta-block.component.ts");
 /* harmony import */ var _components_pricing_card_pricing_card_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/pricing-card/pricing-card.component */ "./src/app/components/pricing-card/pricing-card.component.ts");
 /* harmony import */ var _components_qa_section_qa_section_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/qa-section/qa-section.component */ "./src/app/components/qa-section/qa-section.component.ts");
+/* harmony import */ var _components_features_features_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/features/features.component */ "./src/app/components/features/features.component.ts");
+/* harmony import */ var _components_features_card_features_card_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/features-card/features-card.component */ "./src/app/components/features-card/features-card.component.ts");
+/* harmony import */ var _components_pricing_pricing_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/pricing/pricing.component */ "./src/app/components/pricing/pricing.component.ts");
+
+
+
 
 
 
@@ -170,7 +176,10 @@ var AppModule = /** @class */ (function () {
                 _components_text_block_text_block_component__WEBPACK_IMPORTED_MODULE_11__["TextBlockComponent"],
                 _components_cta_block_cta_block_component__WEBPACK_IMPORTED_MODULE_12__["CtaBlockComponent"],
                 _components_pricing_card_pricing_card_component__WEBPACK_IMPORTED_MODULE_13__["PricingCardComponent"],
-                _components_qa_section_qa_section_component__WEBPACK_IMPORTED_MODULE_14__["QaSectionComponent"]
+                _components_qa_section_qa_section_component__WEBPACK_IMPORTED_MODULE_14__["QaSectionComponent"],
+                _components_features_features_component__WEBPACK_IMPORTED_MODULE_15__["FeaturesComponent"],
+                _components_features_card_features_card_component__WEBPACK_IMPORTED_MODULE_16__["FeaturesCardComponent"],
+                _components_pricing_pricing_component__WEBPACK_IMPORTED_MODULE_17__["PricingComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -246,6 +255,120 @@ var CtaBlockComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/features-card/features-card.component.css":
+/*!**********************************************************************!*\
+  !*** ./src/app/components/features-card/features-card.component.css ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".card {\r\n    background: #E5E2EA;\r\n    border: 1px solid #D1DBE3;\r\n    box-sizing: border-box;\r\n    border-radius: 5px;\r\n}\r\n\r\n.card-pic {\r\n    margin: 55px auto 0 auto;\r\n}\r\n\r\n.heading {\r\n    margin-top: 55px;\r\n    font-size: 18px;\r\n    color: #026FC2;\r\n    font-family: 'SF Pro Display Bold';\r\n}\r\n\r\n.text {\r\n    color: #9DAFBD;\r\n    font-size: 14px;\r\n    font-weight: normal;\r\n    margin-top: 10px;\r\n    margin-bottom: 47px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mZWF0dXJlcy1jYXJkL2ZlYXR1cmVzLWNhcmQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLG1CQUFtQjtJQUNuQix5QkFBeUI7SUFDekIsc0JBQXNCO0lBQ3RCLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLHdCQUF3QjtBQUM1Qjs7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixlQUFlO0lBQ2YsY0FBYztJQUNkLGtDQUFrQztBQUN0Qzs7QUFFQTtJQUNJLGNBQWM7SUFDZCxlQUFlO0lBQ2YsbUJBQW1CO0lBQ25CLGdCQUFnQjtJQUNoQixtQkFBbUI7QUFDdkIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2ZlYXR1cmVzLWNhcmQvZmVhdHVyZXMtY2FyZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNhcmQge1xyXG4gICAgYmFja2dyb3VuZDogI0U1RTJFQTtcclxuICAgIGJvcmRlcjogMXB4IHNvbGlkICNEMURCRTM7XHJcbiAgICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xyXG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG59XHJcblxyXG4uY2FyZC1waWMge1xyXG4gICAgbWFyZ2luOiA1NXB4IGF1dG8gMCBhdXRvO1xyXG59XHJcblxyXG4uaGVhZGluZyB7XHJcbiAgICBtYXJnaW4tdG9wOiA1NXB4O1xyXG4gICAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgY29sb3I6ICMwMjZGQzI7XHJcbiAgICBmb250LWZhbWlseTogJ1NGIFBybyBEaXNwbGF5IEJvbGQnO1xyXG59XHJcblxyXG4udGV4dCB7XHJcbiAgICBjb2xvcjogIzlEQUZCRDtcclxuICAgIGZvbnQtc2l6ZTogMTRweDtcclxuICAgIGZvbnQtd2VpZ2h0OiBub3JtYWw7XHJcbiAgICBtYXJnaW4tdG9wOiAxMHB4O1xyXG4gICAgbWFyZ2luLWJvdHRvbTogNDdweDtcclxufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/components/features-card/features-card.component.html":
+/*!***********************************************************************!*\
+  !*** ./src/app/components/features-card/features-card.component.html ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"card text-center\">\n  <div class=\"container\">\n    <img src=\"{{ imgLink }}\" class=\"img-fluid card-pic\">\n    <div class=\"heading\">{{ heading }}</div>\n    <div class=\"text\">{{ text }}</div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/features-card/features-card.component.ts":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/features-card/features-card.component.ts ***!
+  \*********************************************************************/
+/*! exports provided: FeaturesCardComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeaturesCardComponent", function() { return FeaturesCardComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var FeaturesCardComponent = /** @class */ (function () {
+    function FeaturesCardComponent() {
+    }
+    FeaturesCardComponent.prototype.ngOnInit = function () {
+    };
+    FeaturesCardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-features-card',
+            template: __webpack_require__(/*! ./features-card.component.html */ "./src/app/components/features-card/features-card.component.html"),
+            inputs: ['heading', 'imgLink', 'text'],
+            styles: [__webpack_require__(/*! ./features-card.component.css */ "./src/app/components/features-card/features-card.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], FeaturesCardComponent);
+    return FeaturesCardComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/features/features.component.css":
+/*!************************************************************!*\
+  !*** ./src/app/components/features/features.component.css ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".heading {\r\n    color: #09046A;\r\n    font-size: 48px;\r\n    font-family: 'SF Pro Display Bold';\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.postHeading {\r\n    color: #9DAFBD;\r\n    font-size: 18px;\r\n    margin: 0 auto 50px auto;\r\n    width: 70%;\r\n}\r\n\r\n.block {\r\n    margin-top: 100px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9mZWF0dXJlcy9mZWF0dXJlcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksY0FBYztJQUNkLGVBQWU7SUFDZixrQ0FBa0M7SUFDbEMsbUJBQW1CO0FBQ3ZCOztBQUVBO0lBQ0ksY0FBYztJQUNkLGVBQWU7SUFDZix3QkFBd0I7SUFDeEIsVUFBVTtBQUNkOztBQUVBO0lBQ0ksaUJBQWlCO0FBQ3JCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9mZWF0dXJlcy9mZWF0dXJlcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhlYWRpbmcge1xyXG4gICAgY29sb3I6ICMwOTA0NkE7XHJcbiAgICBmb250LXNpemU6IDQ4cHg7XHJcbiAgICBmb250LWZhbWlseTogJ1NGIFBybyBEaXNwbGF5IEJvbGQnO1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMTBweDtcclxufVxyXG5cclxuLnBvc3RIZWFkaW5nIHtcclxuICAgIGNvbG9yOiAjOURBRkJEO1xyXG4gICAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgbWFyZ2luOiAwIGF1dG8gNTBweCBhdXRvO1xyXG4gICAgd2lkdGg6IDcwJTtcclxufVxyXG5cclxuLmJsb2NrIHtcclxuICAgIG1hcmdpbi10b3A6IDEwMHB4O1xyXG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/components/features/features.component.html":
+/*!*************************************************************!*\
+  !*** ./src/app/components/features/features.component.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"block text-center\">\n  <div class=\"heading\">{{ heading }}</div>\n  <div class=\"postHeading\">{{ postHeading }}</div>\n  <div class=\"cards\">\n    <div class=\"row\">\n      <div class=\"col-lg\">\n        <app-features-card imgLink=\"./../assets/ava.png\"\n                          heading=\"Feature Title\"\n                          text=\"Three Rings for the Elven-kings under the sky, Seven for the Dwarf-lords in halls of stone\">\n        </app-features-card>\n      </div>\n      <div class=\"col-lg\">\n        <app-features-card imgLink=\"./../assets/ava.png\"\n                          heading=\"Feature Title\"\n                          text=\"Three Rings for the Elven-kings under the sky, Seven for the Dwarf-lords in halls of stone\">\n        </app-features-card>\n      </div>\n      <div class=\"col-lg\">\n        <app-features-card imgLink=\"./../assets/ava.png\"\n                          heading=\"Feature Title\"\n                          text=\"Three Rings for the Elven-kings under the sky, Seven for the Dwarf-lords in halls of stone\">\n        </app-features-card>\n      </div>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/features/features.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/components/features/features.component.ts ***!
+  \***********************************************************/
+/*! exports provided: FeaturesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeaturesComponent", function() { return FeaturesComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var FeaturesComponent = /** @class */ (function () {
+    function FeaturesComponent() {
+    }
+    FeaturesComponent.prototype.ngOnInit = function () {
+    };
+    FeaturesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-features',
+            template: __webpack_require__(/*! ./features.component.html */ "./src/app/components/features/features.component.html"),
+            inputs: ['heading', 'postHeading'],
+            styles: [__webpack_require__(/*! ./features.component.css */ "./src/app/components/features/features.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], FeaturesComponent);
+    return FeaturesComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/hero/hero.component.css":
 /*!****************************************************!*\
   !*** ./src/app/components/hero/hero.component.css ***!
@@ -310,7 +433,7 @@ var HeroComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "nav {\r\n    background-color: #f2f2f2;\r\n}\r\n.log-in-btn {\r\n    background-color: #09046A;\r\n    color: white;\r\n    border-radius: 40px;\r\n    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);\r\n    padding: 6px 37px;\r\n    font-size: 14px;\r\n    text-decoration: none;\r\n    border: none;\r\n}\r\n.navbar-toggler, .navbar-toggler:focus, .navbar-toggler:hover {\r\n    border: none;\r\n    outline: none;\r\n}\r\n.nav-item {\r\n    padding: 0 30px;\r\n    font-family: 'SF Pro Display Light';\r\n    color: #9DAFBD;\r\n}\r\na {\r\n    text-decoration: none;\r\n    color: #9DAFBD;\r\n}\r\n.active, a:hover {\r\n    text-decoration: none;\r\n    color: #09046A;\r\n}\r\n.navbar-collapse {\r\n    text-align: center;\r\n}\r\n.bottom-nav {\r\n    background-color: white;\r\n}\r\n.navbar-brand {\r\n    background-color: transparent;\r\n}\r\n.bottom-logo {\r\n    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);\r\n}\r\n.logo {\r\n    border-radius: 10px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx5QkFBeUI7QUFDN0I7QUFDQTtJQUNJLHlCQUF5QjtJQUN6QixZQUFZO0lBQ1osbUJBQW1CO0lBQ25CLDRDQUE0QztJQUM1QyxpQkFBaUI7SUFDakIsZUFBZTtJQUNmLHFCQUFxQjtJQUNyQixZQUFZO0FBQ2hCO0FBRUE7SUFDSSxZQUFZO0lBQ1osYUFBYTtBQUNqQjtBQUVBO0lBQ0ksZUFBZTtJQUNmLG1DQUFtQztJQUNuQyxjQUFjO0FBQ2xCO0FBQ0E7SUFDSSxxQkFBcUI7SUFDckIsY0FBYztBQUNsQjtBQUVBO0lBQ0kscUJBQXFCO0lBQ3JCLGNBQWM7QUFDbEI7QUFFQTtJQUNJLGtCQUFrQjtBQUN0QjtBQUVBO0lBQ0ksdUJBQXVCO0FBQzNCO0FBRUE7SUFDSSw2QkFBNkI7QUFDakM7QUFFQTtJQUNJLDRDQUE0QztBQUNoRDtBQUVBO0lBQ0ksbUJBQW1CO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJuYXYge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2YyZjJmMjtcclxufVxyXG4ubG9nLWluLWJ0biB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDkwNDZBO1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG4gICAgYm9yZGVyLXJhZGl1czogNDBweDtcclxuICAgIGJveC1zaGFkb3c6IDBweCAxMHB4IDIwcHggcmdiYSgwLCAwLCAwLCAwLjIpO1xyXG4gICAgcGFkZGluZzogNnB4IDM3cHg7XHJcbiAgICBmb250LXNpemU6IDE0cHg7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgICBib3JkZXI6IG5vbmU7XHJcbn1cclxuXHJcbi5uYXZiYXItdG9nZ2xlciwgLm5hdmJhci10b2dnbGVyOmZvY3VzLCAubmF2YmFyLXRvZ2dsZXI6aG92ZXIge1xyXG4gICAgYm9yZGVyOiBub25lO1xyXG4gICAgb3V0bGluZTogbm9uZTtcclxufVxyXG5cclxuLm5hdi1pdGVtIHtcclxuICAgIHBhZGRpbmc6IDAgMzBweDtcclxuICAgIGZvbnQtZmFtaWx5OiAnU0YgUHJvIERpc3BsYXkgTGlnaHQnO1xyXG4gICAgY29sb3I6ICM5REFGQkQ7XHJcbn1cclxuYSB7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgICBjb2xvcjogIzlEQUZCRDtcclxufVxyXG5cclxuLmFjdGl2ZSwgYTpob3ZlciB7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgICBjb2xvcjogIzA5MDQ2QTtcclxufVxyXG5cclxuLm5hdmJhci1jb2xsYXBzZSB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbi5ib3R0b20tbmF2IHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xyXG59XHJcblxyXG4ubmF2YmFyLWJyYW5kIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xyXG59XHJcblxyXG4uYm90dG9tLWxvZ28ge1xyXG4gICAgYm94LXNoYWRvdzogMHB4IDBweCAzMHB4IHJnYmEoMCwgMCwgMCwgMC4xNSk7XHJcbn1cclxuXHJcbi5sb2dvIHtcclxuICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XHJcbn0iXX0= */"
+module.exports = "nav {\r\n    background-color: #f2f2f2;\r\n}\r\n.log-in-btn {\r\n    background-color: #09046A;\r\n    color: white;\r\n    border-radius: 40px;\r\n    padding: 6px 37px;\r\n    font-size: 14px;\r\n    text-decoration: none;\r\n    border: none;\r\n}\r\n.log-in-btn:hover {\r\n        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);\r\n    }\r\n.navbar-toggler, .navbar-toggler:focus, .navbar-toggler:hover {\r\n    border: none;\r\n    outline: none;\r\n}\r\n.nav-item {\r\n    padding: 0 30px;\r\n    font-family: 'SF Pro Display Light';\r\n    color: #9DAFBD;\r\n}\r\na {\r\n    text-decoration: none;\r\n    color: #9DAFBD;\r\n}\r\n.active {\r\n    text-decoration: none;\r\n    color: #09046A;\r\n    font-weight: 600;\r\n}\r\n.navbar-collapse {\r\n    text-align: center;\r\n}\r\n.bottom-nav {\r\n    background-color: white;\r\n}\r\n.navbar-brand {\r\n    background-color: transparent;\r\n}\r\n.bottom-logo {\r\n    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);\r\n}\r\n.logo {\r\n    border-radius: 10px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx5QkFBeUI7QUFDN0I7QUFDQTtJQUNJLHlCQUF5QjtJQUN6QixZQUFZO0lBQ1osbUJBQW1CO0lBQ25CLGlCQUFpQjtJQUNqQixlQUFlO0lBQ2YscUJBQXFCO0lBQ3JCLFlBQVk7QUFDaEI7QUFDSTtRQUNJLDRDQUE0QztJQUNoRDtBQUVKO0lBQ0ksWUFBWTtJQUNaLGFBQWE7QUFDakI7QUFFQTtJQUNJLGVBQWU7SUFDZixtQ0FBbUM7SUFDbkMsY0FBYztBQUNsQjtBQUNBO0lBQ0kscUJBQXFCO0lBQ3JCLGNBQWM7QUFDbEI7QUFFQTtJQUNJLHFCQUFxQjtJQUNyQixjQUFjO0lBQ2QsZ0JBQWdCO0FBQ3BCO0FBRUE7SUFDSSxrQkFBa0I7QUFDdEI7QUFFQTtJQUNJLHVCQUF1QjtBQUMzQjtBQUVBO0lBQ0ksNkJBQTZCO0FBQ2pDO0FBRUE7SUFDSSw0Q0FBNEM7QUFDaEQ7QUFFQTtJQUNJLG1CQUFtQjtBQUN2QiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbmF2YmFyL25hdmJhci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsibmF2IHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNmMmYyZjI7XHJcbn1cclxuLmxvZy1pbi1idG4ge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzA5MDQ2QTtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDQwcHg7XHJcbiAgICBwYWRkaW5nOiA2cHggMzdweDtcclxuICAgIGZvbnQtc2l6ZTogMTRweDtcclxuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxuICAgIGJvcmRlcjogbm9uZTtcclxufVxyXG4gICAgLmxvZy1pbi1idG46aG92ZXIge1xyXG4gICAgICAgIGJveC1zaGFkb3c6IDBweCAxMHB4IDIwcHggcmdiYSgwLCAwLCAwLCAwLjIpO1xyXG4gICAgfVxyXG5cclxuLm5hdmJhci10b2dnbGVyLCAubmF2YmFyLXRvZ2dsZXI6Zm9jdXMsIC5uYXZiYXItdG9nZ2xlcjpob3ZlciB7XHJcbiAgICBib3JkZXI6IG5vbmU7XHJcbiAgICBvdXRsaW5lOiBub25lO1xyXG59XHJcblxyXG4ubmF2LWl0ZW0ge1xyXG4gICAgcGFkZGluZzogMCAzMHB4O1xyXG4gICAgZm9udC1mYW1pbHk6ICdTRiBQcm8gRGlzcGxheSBMaWdodCc7XHJcbiAgICBjb2xvcjogIzlEQUZCRDtcclxufVxyXG5hIHtcclxuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxuICAgIGNvbG9yOiAjOURBRkJEO1xyXG59XHJcblxyXG4uYWN0aXZlIHtcclxuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxuICAgIGNvbG9yOiAjMDkwNDZBO1xyXG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcclxufVxyXG5cclxuLm5hdmJhci1jb2xsYXBzZSB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbi5ib3R0b20tbmF2IHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xyXG59XHJcblxyXG4ubmF2YmFyLWJyYW5kIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xyXG59XHJcblxyXG4uYm90dG9tLWxvZ28ge1xyXG4gICAgYm94LXNoYWRvdzogMHB4IDBweCAzMHB4IHJnYmEoMCwgMCwgMCwgMC4xNSk7XHJcbn1cclxuXHJcbi5sb2dvIHtcclxuICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -389,7 +512,7 @@ var NavbarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".card {\r\n    background: #F2F2F2;\r\n    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);\r\n    border-radius: 5px;\r\n    padding: 0 5%;\r\n}\r\n\r\n.kind {\r\n    text-transform: uppercase;\r\n    color: #9DAFBD;\r\n    font-weight: 600;\r\n    margin-top: 60px;\r\n}\r\n\r\n.price {\r\n    color: #09046A;\r\n    font-weight: 400;\r\n    font-size: 34px;\r\n    margin-top: 12px;\r\n}\r\n\r\n.description {\r\n    color: #9DAFBD;\r\n    margin-top: 8px;\r\n    font-weight: normal;\r\n}\r\n\r\n.spec-descr {\r\n    color: #09046A;\r\n    margin-top: 18px;\r\n    font-weight: bold;\r\n}\r\n\r\n.specOne, .specTwo {\r\n        margin-bottom: 18px;\r\n    }\r\n\r\n.specThree {\r\n        margin-bottom: 28px;\r\n    }\r\n\r\n.pricing-btn {\r\n    border: 1px solid #09046A;\r\n    border-radius: 40px;\r\n    color: #09046A;\r\n    background-color: transparent;\r\n    width: 60%;\r\n    margin: 0 auto 60px auto;\r\n}\r\n\r\n.pricing-btn:hover {\r\n        background-color: #09046A;\r\n        color: white;\r\n    }\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9wcmljaW5nLWNhcmQvcHJpY2luZy1jYXJkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxtQkFBbUI7SUFDbkIsNENBQTRDO0lBQzVDLGtCQUFrQjtJQUNsQixhQUFhO0FBQ2pCOztBQUVBO0lBQ0kseUJBQXlCO0lBQ3pCLGNBQWM7SUFDZCxnQkFBZ0I7SUFDaEIsZ0JBQWdCO0FBQ3BCOztBQUVBO0lBQ0ksY0FBYztJQUNkLGdCQUFnQjtJQUNoQixlQUFlO0lBQ2YsZ0JBQWdCO0FBQ3BCOztBQUVBO0lBQ0ksY0FBYztJQUNkLGVBQWU7SUFDZixtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxjQUFjO0lBQ2QsZ0JBQWdCO0lBQ2hCLGlCQUFpQjtBQUNyQjs7QUFDSTtRQUNJLG1CQUFtQjtJQUN2Qjs7QUFDQTtRQUNJLG1CQUFtQjtJQUN2Qjs7QUFFSjtJQUNJLHlCQUF5QjtJQUN6QixtQkFBbUI7SUFDbkIsY0FBYztJQUNkLDZCQUE2QjtJQUM3QixVQUFVO0lBQ1Ysd0JBQXdCO0FBQzVCOztBQUNJO1FBQ0kseUJBQXlCO1FBQ3pCLFlBQVk7SUFDaEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3ByaWNpbmctY2FyZC9wcmljaW5nLWNhcmQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYXJkIHtcclxuICAgIGJhY2tncm91bmQ6ICNGMkYyRjI7XHJcbiAgICBib3gtc2hhZG93OiAwcHggMjBweCA0MHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcclxuICAgIHBhZGRpbmc6IDAgNSU7XHJcbn1cclxuXHJcbi5raW5kIHtcclxuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XHJcbiAgICBjb2xvcjogIzlEQUZCRDtcclxuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XHJcbiAgICBtYXJnaW4tdG9wOiA2MHB4O1xyXG59XHJcblxyXG4ucHJpY2Uge1xyXG4gICAgY29sb3I6ICMwOTA0NkE7XHJcbiAgICBmb250LXdlaWdodDogNDAwO1xyXG4gICAgZm9udC1zaXplOiAzNHB4O1xyXG4gICAgbWFyZ2luLXRvcDogMTJweDtcclxufVxyXG5cclxuLmRlc2NyaXB0aW9uIHtcclxuICAgIGNvbG9yOiAjOURBRkJEO1xyXG4gICAgbWFyZ2luLXRvcDogOHB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IG5vcm1hbDtcclxufVxyXG5cclxuLnNwZWMtZGVzY3Ige1xyXG4gICAgY29sb3I6ICMwOTA0NkE7XHJcbiAgICBtYXJnaW4tdG9wOiAxOHB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbn1cclxuICAgIC5zcGVjT25lLCAuc3BlY1R3byB7XHJcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMThweDtcclxuICAgIH1cclxuICAgIC5zcGVjVGhyZWUge1xyXG4gICAgICAgIG1hcmdpbi1ib3R0b206IDI4cHg7XHJcbiAgICB9XHJcblxyXG4ucHJpY2luZy1idG4ge1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgIzA5MDQ2QTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDQwcHg7XHJcbiAgICBjb2xvcjogIzA5MDQ2QTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xyXG4gICAgd2lkdGg6IDYwJTtcclxuICAgIG1hcmdpbjogMCBhdXRvIDYwcHggYXV0bztcclxufVxyXG4gICAgLnByaWNpbmctYnRuOmhvdmVyIHtcclxuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDkwNDZBO1xyXG4gICAgICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIH1cclxuIl19 */"
+module.exports = ".card {\r\n    background: #F2F2F2;\r\n    border-radius: 5px;\r\n    padding: 0 5%;\r\n}\r\n\r\n.center {\r\n    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.kind {\r\n    text-transform: uppercase;\r\n    color: #9DAFBD;\r\n    font-weight: 600;\r\n    margin-top: 60px;\r\n}\r\n\r\n.price {\r\n    color: #09046A;\r\n    font-weight: 400;\r\n    font-size: 34px;\r\n    margin-top: 12px;\r\n}\r\n\r\n.description {\r\n    color: #9DAFBD;\r\n    margin-top: 8px;\r\n    font-weight: normal;\r\n}\r\n\r\n.spec-descr {\r\n    color: #09046A;\r\n    margin-top: 18px;\r\n    font-weight: bold;\r\n}\r\n\r\n.specOne, .specTwo {\r\n        margin-bottom: 18px;\r\n    }\r\n\r\n.specThree {\r\n        margin-bottom: 28px;\r\n    }\r\n\r\n.pricing-btn {\r\n    border: 1px solid #09046A;\r\n    border-radius: 40px;\r\n    color: #09046A;\r\n    background-color: transparent;\r\n    width: 60%;\r\n    margin: 0 auto 60px auto;\r\n}\r\n\r\n.pricing-btn:hover {\r\n        background-color: #09046A;\r\n        color: white;\r\n    }\r\n\r\n.centerBtn {\r\n        background-color: #09046A;\r\n        color: white;\r\n    }\r\n\r\n.centerBtn:hover {\r\n        background-color: #09046A;\r\n        color: white;\r\n        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);\r\n    }\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9wcmljaW5nLWNhcmQvcHJpY2luZy1jYXJkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxtQkFBbUI7SUFDbkIsa0JBQWtCO0lBQ2xCLGFBQWE7QUFDakI7O0FBRUE7SUFDSSw0Q0FBNEM7QUFDaEQ7O0FBRUE7SUFDSSx5QkFBeUI7SUFDekIsY0FBYztJQUNkLGdCQUFnQjtJQUNoQixnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxjQUFjO0lBQ2QsZ0JBQWdCO0lBQ2hCLGVBQWU7SUFDZixnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxjQUFjO0lBQ2QsZUFBZTtJQUNmLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLGNBQWM7SUFDZCxnQkFBZ0I7SUFDaEIsaUJBQWlCO0FBQ3JCOztBQUNJO1FBQ0ksbUJBQW1CO0lBQ3ZCOztBQUNBO1FBQ0ksbUJBQW1CO0lBQ3ZCOztBQUVKO0lBQ0kseUJBQXlCO0lBQ3pCLG1CQUFtQjtJQUNuQixjQUFjO0lBQ2QsNkJBQTZCO0lBQzdCLFVBQVU7SUFDVix3QkFBd0I7QUFDNUI7O0FBQ0k7UUFDSSx5QkFBeUI7UUFDekIsWUFBWTtJQUNoQjs7QUFFQTtRQUNJLHlCQUF5QjtRQUN6QixZQUFZO0lBQ2hCOztBQUNBO1FBQ0kseUJBQXlCO1FBQ3pCLFlBQVk7UUFDWiw0Q0FBNEM7SUFDaEQiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3ByaWNpbmctY2FyZC9wcmljaW5nLWNhcmQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYXJkIHtcclxuICAgIGJhY2tncm91bmQ6ICNGMkYyRjI7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XHJcbiAgICBwYWRkaW5nOiAwIDUlO1xyXG59XHJcblxyXG4uY2VudGVyIHtcclxuICAgIGJveC1zaGFkb3c6IDBweCAyMHB4IDQwcHggcmdiYSgwLCAwLCAwLCAwLjEpO1xyXG59XHJcblxyXG4ua2luZCB7XHJcbiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xyXG4gICAgY29sb3I6ICM5REFGQkQ7XHJcbiAgICBmb250LXdlaWdodDogNjAwO1xyXG4gICAgbWFyZ2luLXRvcDogNjBweDtcclxufVxyXG5cclxuLnByaWNlIHtcclxuICAgIGNvbG9yOiAjMDkwNDZBO1xyXG4gICAgZm9udC13ZWlnaHQ6IDQwMDtcclxuICAgIGZvbnQtc2l6ZTogMzRweDtcclxuICAgIG1hcmdpbi10b3A6IDEycHg7XHJcbn1cclxuXHJcbi5kZXNjcmlwdGlvbiB7XHJcbiAgICBjb2xvcjogIzlEQUZCRDtcclxuICAgIG1hcmdpbi10b3A6IDhweDtcclxuICAgIGZvbnQtd2VpZ2h0OiBub3JtYWw7XHJcbn1cclxuXHJcbi5zcGVjLWRlc2NyIHtcclxuICAgIGNvbG9yOiAjMDkwNDZBO1xyXG4gICAgbWFyZ2luLXRvcDogMThweDtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59XHJcbiAgICAuc3BlY09uZSwgLnNwZWNUd28ge1xyXG4gICAgICAgIG1hcmdpbi1ib3R0b206IDE4cHg7XHJcbiAgICB9XHJcbiAgICAuc3BlY1RocmVlIHtcclxuICAgICAgICBtYXJnaW4tYm90dG9tOiAyOHB4O1xyXG4gICAgfVxyXG5cclxuLnByaWNpbmctYnRuIHtcclxuICAgIGJvcmRlcjogMXB4IHNvbGlkICMwOTA0NkE7XHJcbiAgICBib3JkZXItcmFkaXVzOiA0MHB4O1xyXG4gICAgY29sb3I6ICMwOTA0NkE7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDtcclxuICAgIHdpZHRoOiA2MCU7XHJcbiAgICBtYXJnaW46IDAgYXV0byA2MHB4IGF1dG87XHJcbn1cclxuICAgIC5wcmljaW5nLWJ0bjpob3ZlciB7XHJcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzA5MDQ2QTtcclxuICAgICAgICBjb2xvcjogd2hpdGU7XHJcbiAgICB9XHJcblxyXG4gICAgLmNlbnRlckJ0biB7XHJcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzA5MDQ2QTtcclxuICAgICAgICBjb2xvcjogd2hpdGU7XHJcbiAgICB9XHJcbiAgICAuY2VudGVyQnRuOmhvdmVyIHtcclxuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDkwNDZBO1xyXG4gICAgICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgICAgICBib3gtc2hhZG93OiAwcHggMTBweCAyMHB4IHJnYmEoMCwgMCwgMCwgMC4yKTtcclxuICAgIH1cclxuIl19 */"
 
 /***/ }),
 
@@ -400,7 +523,7 @@ module.exports = ".card {\r\n    background: #F2F2F2;\r\n    box-shadow: 0px 20p
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card text-center\">\n  <span class=\"kind\">{{ kind }}</span>\n  <span class=\"price\">{{ price }}</span>\n  <span class=\"description\">{{ description }}</span>\n  <div class=\"spec-descr\">\n    <div class=\"specOne\">{{ specOne }}</div>\n    <div class=\"specTwo\">{{ specTwo }}</div>\n    <div class=\"specThree\">{{ specThree }}</div>\n  </div>\n  <button type=\"button\" class=\"btn btn-primary pricing-btn\">{{ btnText }}</button>\n</div>\n"
+module.exports = "<div class=\"card text-center\" [ngClass]=\"middleCard === 'true' ? 'center' : ''\">\n  <span class=\"kind\">{{ kind }}</span>\n  <span class=\"price\">{{ price }}</span>\n  <span class=\"description\">{{ description }}</span>\n  <div class=\"spec-descr\">\n    <div class=\"specOne\">{{ specOne }}</div>\n    <div class=\"specTwo\">{{ specTwo }}</div>\n    <div class=\"specThree\">{{ specThree }}</div>\n  </div>\n  <button type=\"button\" [ngClass]=\"middleCard === 'true' ? 'centerBtn' : ''\" class=\"btn btn-primary pricing-btn\">{{ btnText }}</button>\n</div>\n"
 
 /***/ }),
 
@@ -427,12 +550,69 @@ var PricingCardComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-pricing-card',
             template: __webpack_require__(/*! ./pricing-card.component.html */ "./src/app/components/pricing-card/pricing-card.component.html"),
-            inputs: ['kind', 'btnText', 'price', 'description', 'specOne', 'specTwo', 'specThree'],
+            inputs: ['kind', 'btnText', 'price', 'description', 'specOne', 'specTwo', 'specThree', 'middleCard'],
             styles: [__webpack_require__(/*! ./pricing-card.component.css */ "./src/app/components/pricing-card/pricing-card.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], PricingCardComponent);
     return PricingCardComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/pricing/pricing.component.css":
+/*!**********************************************************!*\
+  !*** ./src/app/components/pricing/pricing.component.css ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".block {\r\n    margin-top: 140px;\r\n}\r\n\r\n.heading {\r\n    color: #09046A;\r\n    font-size: 48px;\r\n    font-family: \"SF Pro Display Bold\";\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.postHeading {\r\n    font-family: \"SF Pro Display Light\";\r\n    line-height: 30px;\r\n    font-size: 20px;\r\n    color: #979797;\r\n    margin-bottom: 30px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9wcmljaW5nL3ByaWNpbmcuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLGNBQWM7SUFDZCxlQUFlO0lBQ2Ysa0NBQWtDO0lBQ2xDLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLG1DQUFtQztJQUNuQyxpQkFBaUI7SUFDakIsZUFBZTtJQUNmLGNBQWM7SUFDZCxtQkFBbUI7QUFDdkIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3ByaWNpbmcvcHJpY2luZy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJsb2NrIHtcclxuICAgIG1hcmdpbi10b3A6IDE0MHB4O1xyXG59XHJcblxyXG4uaGVhZGluZyB7XHJcbiAgICBjb2xvcjogIzA5MDQ2QTtcclxuICAgIGZvbnQtc2l6ZTogNDhweDtcclxuICAgIGZvbnQtZmFtaWx5OiBcIlNGIFBybyBEaXNwbGF5IEJvbGRcIjtcclxuICAgIG1hcmdpbi1ib3R0b206IDIwcHg7XHJcbn1cclxuXHJcbi5wb3N0SGVhZGluZyB7XHJcbiAgICBmb250LWZhbWlseTogXCJTRiBQcm8gRGlzcGxheSBMaWdodFwiO1xyXG4gICAgbGluZS1oZWlnaHQ6IDMwcHg7XHJcbiAgICBmb250LXNpemU6IDIwcHg7XHJcbiAgICBjb2xvcjogIzk3OTc5NztcclxuICAgIG1hcmdpbi1ib3R0b206IDMwcHg7XHJcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/pricing/pricing.component.html":
+/*!***********************************************************!*\
+  !*** ./src/app/components/pricing/pricing.component.html ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"block text-center\">\n    <div class=\"heading\">{{ heading }}</div>\n    <div class=\"postHeading\">{{ postHeading }}</div>\n    <div class=\"row\">\n      <div class=\"col-lg\">\n        <app-pricing-card kind=\"Базовый\"\n                          price=\"$ 5.95 /mo\"\n                          description=\"Home is behind, the world ahead and there are many paths to tread through shadows to the edge.\"\n                          specOne=\"2 GB Storage\"\n                          specTwo=\"10 GB Bandwidth\"\n                          specThree=\"1 Domain\"\n                          btnText=\"Start free trial\">\n        </app-pricing-card>\n      </div>\n      <div class=\"col-lg\">\n        <app-pricing-card kind=\"Премиум\"\n                          price=\"$ 16.95 /mo\"\n                          description=\"Home is behind, the world ahead and there are many paths to tread through shadows to the edge.\"\n                          specOne=\"2 GB Storage\"\n                          specTwo=\"10 GB Bandwidth\"\n                          specThree=\"1 Domain\"\n                          middleCard=\"true\"\n                          btnText=\"Start free trial\">\n        </app-pricing-card>\n      </div>\n      <div class=\"col-lg\">\n        <app-pricing-card kind=\"Бизнес\"\n                          price=\"$ 27.95 /mo\"\n                          description=\"Home is behind, the world ahead and there are many paths to tread through shadows to the edge.\"\n                          specOne=\"2 GB Storage\"\n                          specTwo=\"10 GB Bandwidth\"\n                          specThree=\"1 Domain\"\n                          btnText=\"Start free trial\">\n        </app-pricing-card>\n      </div>\n      </div>\n  </div>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/pricing/pricing.component.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/components/pricing/pricing.component.ts ***!
+  \*********************************************************/
+/*! exports provided: PricingComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PricingComponent", function() { return PricingComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var PricingComponent = /** @class */ (function () {
+    function PricingComponent() {
+    }
+    PricingComponent.prototype.ngOnInit = function () {
+    };
+    PricingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-pricing',
+            template: __webpack_require__(/*! ./pricing.component.html */ "./src/app/components/pricing/pricing.component.html"),
+            inputs: ['heading', 'postHeading'],
+            styles: [__webpack_require__(/*! ./pricing.component.css */ "./src/app/components/pricing/pricing.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], PricingComponent);
+    return PricingComponent;
 }());
 
 
@@ -638,7 +818,7 @@ module.exports = ".grey {\r\n    background-color: #E5E2EA;\r\n    margin: 10px;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-hero heading=\"Сервис для создания активности и стимуляции продаж в Instagram\" \n          postHeading=\"Повышайте вовлеченность своих подписчиков. Увеличивайте органический охват.  Мотивируйте людей к покупке через Instagram.\" \n          btnText=\"Начать бесплатно\">\n</app-hero>\n\n<div class=\"container\">\n  <div style=\"background-color: #f2f2f2\" class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-sm text-center\">\n        <h3>Balance</h3>\n        <img src=\"../assets/ava.png\" style=\"margin-bottom: 50px\">\n        <p>\n            One of three columns<br>\n            One of three columns<br>\n            One of three columns<br>\n            One of three columns\n        </p>\n      </div>\n      <div class=\"col-sm text-center\">\n        <h3>Profile stats</h3>\n        <img src=\"../assets/ava.png\" style=\"margin-bottom: 50px\">\n        <p>\n            One of three columns<br>\n            One of three columns<br>\n            One of three columns<br>\n            One of three columns\n        </p>\n      </div>\n      <div class=\"col-sm text-center\">\n        <h3>Notification</h3>\n        <img src=\"../assets/ava.png\" style=\"margin-bottom: 50px\">\n        <p>\n            One of three columns<br>\n            One of three columns<br>\n            One of three columns<br>\n            One of three columns\n        </p>\n      </div>\n    </div>\n    <div style=\"margin-top: 80px\">\n        <div class=\"row\">\n        <div class=\"col-sm\">\n          <h2>Statistics</h2>\n        </div>\n        <div class=\"col-sm text-right\">\n            <button type=\"button\" class=\"btn btn-primary\">Monthly</button>\n            <button type=\"button\" class=\"btn btn-primary\">Yearly</button>\n        </div>\n      </div>\n      <img src=\"../assets/Graph.png\" class=\"img-fluid\" style=\"margin-top: 80px\">\n    </div>\n  </div>\n    \n\n    <app-text-pic-block heading=\"Работает в облаке\"\n                        text=\"It's a dangerous business, Frodo, going out your door. You step onto the road Where the Shadows lie.\"\n                        textAlign=\"left\"\n                        imgLink=\"../assets/default.png\">\n    </app-text-pic-block>\n    <app-text-pic-block heading=\"Не требует входа в аккаунт Instagram\"\n                        text=\"It's a dangerous business, Frodo, going out your door. You step onto the road Where the Shadows lie.\"\n                        textAlign=\"right\"\n                        imgLink=\"../assets/default.png\">\n    </app-text-pic-block>\n    <app-text-pic-block heading=\"Живые аккаунты\"\n                        text=\"It's a dangerous business, Frodo, going out your door. You step onto the road Where the Shadows lie.\"\n                        textAlign=\"left\"\n                        imgLink=\"../assets/default.png\">\n    </app-text-pic-block>\n\n    <div>\n      <h1 class=\"text-center\" style=\"margin-bottom: 50px;\">Преимущества</h1>\n      <p class=\"text-center\" style=\"margin-bottom: 80px;\">Home is behind, the world ahead and there are many paths to tread through shadows to the edge, world ahead and there are.</p>\n      <div class=\"row\">\n          <div class=\"col-sm text-center grey\">\n            <img src=\"../assets/ava.png\" style=\"margin-bottom: 50px\">\n            <h3>Balance</h3>\n            <p>One of three columns\n            One of three columns\n            One of three columns\n            One of three columns</p>\n            \n          </div>\n          <div class=\"col-sm text-center grey\">\n            <img src=\"../assets/ava.png\" style=\"margin-bottom: 50px\">\n            <h3>Profile stats</h3>\n            <p>One of three columns\n            One of three columns\n            One of three columns\n            One of three columns</p>\n          </div>\n          <div class=\"col-sm text-center grey\">\n            <img src=\"../assets/ava.png\" style=\"margin-bottom: 50px\">\n            <h3>Notification</h3>\n            One of three columns\n            One of three columns\n            One of three columns\n            One of three columns\n          </div>\n        </div>\n    </div>\n\n    <app-text-block text=\"Currently, Ford sells six sedans and coupes in North America with the Fiesta, Focus, Fusion, C-Max, Mustang and Taurus. This lineup hits.\"\n                    imgLink=\"../assets/ava.png\"\n                    name=\"Emily Jørgensen\"\n                    job=\"Author at Panoply Store\">\n    </app-text-block>\n\n    <app-cta-block  heading=\"Design faster & better\"\n                    text=\"But Brooke Chaffin and Catherine Connors are looking to change that with the introduction of Maveric\"\n                    btnText=\"Get started\">\n    </app-cta-block>\n  </div>\n"
+module.exports = "<app-hero heading=\"Сервис для создания активности и стимуляции продаж в Instagram\" \n          postHeading=\"Повышайте вовлеченность своих подписчиков. Увеличивайте органический охват.  Мотивируйте людей к покупке через Instagram.\" \n          btnText=\"Начать бесплатно\">\n</app-hero>\n\n<div class=\"container\">\n  <div style=\"background-color: #f2f2f2\" class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-sm text-center\">\n        <h3>Balance</h3>\n        <img src=\"../assets/ava.png\" style=\"margin-bottom: 50px\">\n        <p>\n            One of three columns<br>\n            One of three columns<br>\n            One of three columns<br>\n            One of three columns\n        </p>\n      </div>\n      <div class=\"col-sm text-center\">\n        <h3>Profile stats</h3>\n        <img src=\"../assets/ava.png\" style=\"margin-bottom: 50px\">\n        <p>\n            One of three columns<br>\n            One of three columns<br>\n            One of three columns<br>\n            One of three columns\n        </p>\n      </div>\n      <div class=\"col-sm text-center\">\n        <h3>Notification</h3>\n        <img src=\"../assets/ava.png\" style=\"margin-bottom: 50px\">\n        <p>\n            One of three columns<br>\n            One of three columns<br>\n            One of three columns<br>\n            One of three columns\n        </p>\n      </div>\n    </div>\n    <div style=\"margin-top: 80px\">\n        <div class=\"row\">\n        <div class=\"col-sm\">\n          <h2>Statistics</h2>\n        </div>\n        <div class=\"col-sm text-right\">\n            <button type=\"button\" class=\"btn btn-primary\">Monthly</button>\n            <button type=\"button\" class=\"btn btn-primary\">Yearly</button>\n        </div>\n      </div>\n      <img src=\"../assets/Graph.png\" class=\"img-fluid\" style=\"margin-top: 80px\">\n    </div>\n  </div>\n    \n\n    <app-text-pic-block heading=\"Работает в облаке\"\n                        text=\"It's a dangerous business, Frodo, going out your door. You step onto the road Where the Shadows lie.\"\n                        textAlign=\"left\"\n                        imgLink=\"../assets/default.png\">\n    </app-text-pic-block>\n    <app-text-pic-block heading=\"Не требует входа в аккаунт Instagram\"\n                        text=\"It's a dangerous business, Frodo, going out your door. You step onto the road Where the Shadows lie.\"\n                        textAlign=\"right\"\n                        imgLink=\"../assets/default.png\">\n    </app-text-pic-block>\n    <app-text-pic-block heading=\"Живые аккаунты\"\n                        text=\"It's a dangerous business, Frodo, going out your door. You step onto the road Where the Shadows lie.\"\n                        textAlign=\"left\"\n                        imgLink=\"../assets/default.png\">\n    </app-text-pic-block>\n\n    <app-features heading=\"Преимущества\"\n                  postHeading=\"Home is behind, the world ahead and there are many paths to tread through shadows to the edge, world ahead and there are.\">\n    </app-features>\n      \n    <app-text-block text=\"Currently, Ford sells six sedans and coupes in North America with the Fiesta, Focus, Fusion, C-Max, Mustang and Taurus. This lineup hits.\"\n                    imgLink=\"../assets/ava.png\"\n                    name=\"Emily Jørgensen\"\n                    job=\"Author at Panoply Store\">\n    </app-text-block>\n\n    <app-cta-block  heading=\"Design faster & better\"\n                    text=\"But Brooke Chaffin and Catherine Connors are looking to change that with the introduction of Maveric\"\n                    btnText=\"Get started\">\n    </app-cta-block>\n  </div>\n"
 
 /***/ }),
 
@@ -694,7 +874,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n    <div style=\"margin-top: 100px\">\n        <h1 class=\"text-center\">Тарифы</h1>\n        <p class=\"text-center\" style=\"margin-bottom: 20px;\">Выберите наиболее подходящий для вас тариф</p>\n        <p class=\"text-center\"><b>*radio-button*</b></p>\n        <div class=\"row\">\n          <div class=\"col-sm-4\">\n            <app-pricing-card kind=\"Базовый\"\n                              price=\"$ 5.95 /mo\"\n                              description=\"Home is behind, the world ahead and there are many paths to tread through shadows to the edge.\"\n                              specOne=\"2 GB Storage\"\n                              specTwo=\"10 GB Bandwidth\"\n                              specThree=\"1 Domain\"\n                              btnText=\"Start free trial\">\n            </app-pricing-card>\n          </div>\n          <div class=\"col-sm-4\">\n            <app-pricing-card kind=\"Премиум\"\n                              price=\"$ 16.95 /mo\"\n                              description=\"Home is behind, the world ahead and there are many paths to tread through shadows to the edge.\"\n                              specOne=\"2 GB Storage\"\n                              specTwo=\"10 GB Bandwidth\"\n                              specThree=\"1 Domain\"\n                              btnText=\"Start free trial\">\n            </app-pricing-card>\n          </div>\n          <div class=\"col-sm-4\">\n            <app-pricing-card kind=\"Бизнес\"\n                              price=\"$ 27.95 /mo\"\n                              description=\"Home is behind, the world ahead and there are many paths to tread through shadows to the edge.\"\n                              specOne=\"2 GB Storage\"\n                              specTwo=\"10 GB Bandwidth\"\n                              specThree=\"1 Domain\"\n                              btnText=\"Start free trial\">\n            </app-pricing-card>\n          </div>\n          </div>\n      </div>\n\n  <app-text-block text=\"Currently, Ford sells six sedans and coupes in North America with the Fiesta, Focus, Fusion, C-Max, Mustang and Taurus. This lineup hits.\"\n                    imgLink=\"../assets/ava.png\"\n                    name=\"Emily Jørgensen\"\n                    job=\"Author at Panoply Store\">\n  </app-text-block>\n  <app-qa-section heading=\"Вопрос-ответ\"\n                  postHeading=\"Список самых часто задаваемых вопросов\">\n  </app-qa-section>\n  <app-cta-block  heading=\"Начать работу\"\n                  text=\"But Brooke Chaffin and Catherine Connors are looking to change that with the introduction of Maveric\"\n                  btnText=\"Get started\">\n  </app-cta-block>\n</div>"
+module.exports = "<div class=\"container\">\n  <app-pricing  heading=\"Тарифы\"\n                postHeading=\"Выберите наиболее подходящий для вас тариф\">\n  </app-pricing>\n\n  <app-text-block text=\"Currently, Ford sells six sedans and coupes in North America with the Fiesta, Focus, Fusion, C-Max, Mustang and Taurus. This lineup hits.\"\n                    imgLink=\"../assets/ava.png\"\n                    name=\"Emily Jørgensen\"\n                    job=\"Author at Panoply Store\">\n  </app-text-block>\n  <app-qa-section heading=\"Вопрос-ответ\"\n                  postHeading=\"Список самых часто задаваемых вопросов\">\n  </app-qa-section>\n  <app-cta-block  heading=\"Начать работу\"\n                  text=\"But Brooke Chaffin and Catherine Connors are looking to change that with the introduction of Maveric\"\n                  btnText=\"Get started\">\n  </app-cta-block>\n</div>"
 
 /***/ }),
 
